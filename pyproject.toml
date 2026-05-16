@@ -1,0 +1,24 @@
+[project]
+name = "robot_zhenbang_challenge"
+version = "2.0.0"
+description = "VLM + Code as Policy + Diffusion Policy 混合架构机械臂控制"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "numpy",
+    "opencv-python",
+    "gradio>=4.0",
+    "pyyaml",
+    "matplotlib",
+    "scipy",
+    "pygame",
+    "openai>=1.0",
+    "ultralytics",
+    "funasr",
+    "modelscope",
+    "lerobot[feetech] @ git+https://github.com/huggingface/lerobot.git",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]

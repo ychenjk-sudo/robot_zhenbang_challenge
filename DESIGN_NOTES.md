@@ -1,5 +1,8 @@
 # 真棒挑战 · 设计笔记
 
+> ⚠️ **注意**: 本文档保留历史技术细节，但架构设计已被 [`MODEL_HISTORY.md`](MODEL_HISTORY.md) 和 [`README.md`](README.md) 替代。  
+> 当前使用 VLM + CaP + DP 混合架构，详见 README。
+
 > 持续更新的实验复盘 + 架构决策记录. 跨 session 用, 给未来的自己/合作者看.
 
 ---

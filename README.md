@@ -101,21 +101,17 @@ cd lerobot
 pip install -e ".[feetech]"
 ```
 
-### 2. 下载本仓库 + 模型
+### 2. 安装本仓库依赖
 
 ```bash
 git clone https://github.com/ychenjk-sudo/robot_zhenbang_challenge
 cd robot_zhenbang_challenge
 
-# 下载 DP 模型
-gh release download v1.0
-# 创建 checkpoints 目录并解压
-mkdir -p checkpoints/diffusion_zhenbang_v2/checkpoints/002000/pretrained_model
-mv model.safetensors config.json policy_preprocessor.json policy_postprocessor.json \
-   checkpoints/diffusion_zhenbang_v2/checkpoints/002000/pretrained_model/
+# 安装 Python 依赖（需要先装好 LeRobot）
+pip install -e .
 ```
 
-### 3. 配置 API Key
+### 3. 下载模型权重
 
 ```bash
 export DASHSCOPE_API_KEY="sk-your-key"
