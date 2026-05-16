@@ -1,0 +1,18 @@
+{
+  "carrot": {
+    "x_offset": -0.09000000000000002,
+    "y_offset": 0.0,
+    "successes": 18,
+    "failures": 1,
+    "last_success_ts": "2026-05-14T02:11:16.939077",
+    "last_failure_ts": "2026-05-14T01:59:48.418565"
+  },
+  "萝卜": {
+    "x_offset": -0.09,
+    "y_offset": 0.0,
+    "successes": 13,
+    "failures": 2,
+    "last_success_ts": "2026-05-14T02:25:45.200711",
+    "last_failure_ts": "2026-05-14T02:31:43.277910"
+  }
+}

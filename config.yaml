@@ -1,0 +1,138 @@
+robot:
+  # 机械臂型号: so100 | so101 | koch | moss_v1
+  type: "so101"
+  # follower 串口设备 (macOS)
+  port: "/dev/tty.usbmodem5B141449171"
+  # 机器人ID (与校准时的 id 保持一致)
+  id: "zhenbang_follower"
+  # 动作平滑系数
+  smooth_factor: 0.15
+  # 每个动作步骤的基础等待时间(秒)
+  step_delay: 0.05
+  # leader 臂串口 (用于 calibrate.py 的 teleop 标定)。可留空，用 --leader-port 覆盖
+  leader_port: "/dev/tty.usbmodem5B141449051"
+  leader_id: "zhenbang_leader"
+
+camera:
+  index: 0
+  width: 640
+  height: 480
+  fps: 30
+
+# 在线强化学习参数
+learner:
+  lr: 0.001                    # 策略网络学习率
+  gamma: 0.99                 # 折扣因子（单步交互中影响较小）
+  baseline_decay: 0.9         # 奖励基线的指数移动平均衰减率
+  entropy_coef: 0.02          # 熵奖励系数（越大越鼓励早期探索）
+  epsilon_start: 0.0          # 推理模式：不探索
+  epsilon_end: 0.0
+  epsilon_decay_steps: 80     # 保留字段，已无效
+  image_size: 84              # 策略网络输入图像尺寸
+
+game:
+  # 机械臂关键姿态 (归一化值 -100~100 或实际角度, 根据你的臂调整!)
+  # 强烈建议先用 teleop 模式找到合适角度再填入
+  poses:
+    home:
+      shoulder_pan: 17.05
+      shoulder_lift: -102.37
+      elbow_flex: 95.08
+      wrist_flex: 54.46
+      wrist_roll: 4.88
+      gripper: 24.79
+
+    left_hover:
+      shoulder_pan: 4.22
+      shoulder_lift: -59.3
+      elbow_flex: 58.77
+      wrist_flex: 48.13
+      wrist_roll: 1.8
+      gripper: 21.55
+
+    left_hit:
+      shoulder_pan: 4.57
+      shoulder_lift: -36.26
+      elbow_flex: 53.05
+      wrist_flex: 40.04
+      wrist_roll: 6.81
+      gripper: 20.09
+
+    right_hover:
+      shoulder_pan: 22.33
+      shoulder_lift: -45.67
+      elbow_flex: 50.68
+      wrist_flex: 49.54
+      wrist_roll: -0.57
+      gripper: 20.09
+
+    right_hit:
+      shoulder_pan: 27.25
+      shoulder_lift: -22.64
+      elbow_flex: 51.56
+      wrist_flex: 32.84
+      wrist_roll: 1.63
+      gripper: 20.09
+
+    # center_hover / center_hit are placeholder averages of left+right.
+    # Refine via teleop (python teleop_guide.py) for best results.
+    center_hover:
+      shoulder_pan: 13.28
+      shoulder_lift: -52.49
+      elbow_flex: 54.73
+      wrist_flex: 48.84
+      wrist_roll: 0.62
+      gripper: 20.82
+
+    center_hit:
+      shoulder_pan: 15.91
+      shoulder_lift: -29.45
+      elbow_flex: 52.31
+      wrist_flex: 36.44
+      wrist_roll: 4.22
+      gripper: 20.09
+
+    left_peek:
+      shoulder_pan: 16.0
+      shoulder_lift: -70.46
+      elbow_flex: 52.44
+      wrist_flex: 67.65
+      wrist_roll: 48.84
+      gripper: 12.02
+
+    right_peek:
+      shoulder_pan: 23.56
+      shoulder_lift: -66.33
+      elbow_flex: 44.7
+      wrist_flex: 72.84
+      wrist_roll: -32.57
+      gripper: 11.95
+
+    center_look:
+      shoulder_pan: 14.95
+      shoulder_lift: -43.21
+      elbow_flex: -2.68
+      wrist_flex: 99.12
+      wrist_roll: -2.42
+      gripper: 13.29
+
+    celebrate:
+      shoulder_pan: 20.31
+      shoulder_lift: -72.92
+      elbow_flex: 74.86
+      wrist_flex: -11.03
+      wrist_roll: 20.0
+      gripper: 44.56
+
+    sad:
+      shoulder_pan: 20.31
+      shoulder_lift: -95.96
+      elbow_flex: 85.32
+      wrist_flex: 56.48
+      wrist_roll: 2.42
+      gripper: 12.02
+
+voice:
+  sounds_dir: "./sounds"
+  volume: 0.8
+  fallback_tts: false
