@@ -1,14 +1,7 @@
 *.pyc
 __pycache__/
-*.egg-info/
-demos/
-demos_old/
-demos_v2/
-datasets/
-checkpoints/
 .DS_Store
-*.zip
-*.mp4
-*.npy
-*.npz
 calibration.npz
+checkpoints/
+offline_data/
+datasets/local/

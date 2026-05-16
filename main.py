@@ -212,8 +212,8 @@ def start_game():
 
     # Phase D: try to load Diffusion Policy runner
     dp_runner = None
-    dp_checkpoint = "/Users/chenyuying/Downloads/lerobot_repo/checkpoints/diffusion_zhenbang/checkpoints/002000/pretrained_model"
-    dp_stats = "/Users/chenyuying/Downloads/lerobot_repo/datasets/local/zhenbang_pickplace_dp/meta/stats.json"
+    dp_checkpoint = "/Users/chenyuying/Downloads/lerobot_repo/checkpoints/diffusion_zhenbang_v2/checkpoints/002000/pretrained_model"
+    dp_stats = "/Users/chenyuying/Downloads/lerobot_repo/datasets/local/zhenbang_pickplace_dp_v3/meta/stats.json"
     try:
         from dp_runner import DPRunner
 

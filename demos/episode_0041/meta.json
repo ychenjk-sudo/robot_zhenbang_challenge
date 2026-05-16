@@ -1,0 +1,16 @@
+{
+  "episode_id": 41,
+  "task_name": "pick_carrot",
+  "instruction": "pick up the carrot",
+  "fps": 20.0,
+  "n_frames": 106,
+  "joint_names": [
+    "shoulder_pan",
+    "shoulder_lift",
+    "elbow_flex",
+    "wrist_flex",
+    "wrist_roll",
+    "gripper"
+  ],
+  "timestamp": "2026-05-15T00:26:31"
+}
